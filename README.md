@@ -6,6 +6,8 @@
 
 This repository contains the SIA client-server prototype for speech-driven immersive analytics in VR.
 
+For public-release scope, contracts, and known limits, see [SIA-Server/REPRODUCIBILITY.md](SIA-Server/REPRODUCIBILITY.md).
+
 ## Repository Structure
 
 ```
