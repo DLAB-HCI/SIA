@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SIA Chart Spec Public Summary Schema",
+  "description": "Public-release contract summary for chart spec validation.",
+  "type": "object",
+  "properties": {
+    "mark": { "type": "string" },
+    "data": {
+      "type": "object",
+      "properties": {
+        "url": { "type": "string" }
+      },
+      "required": ["url"]
+    },
+    "encoding": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "object" },
+        "y": { "type": "object" },
+        "z": { "type": "object" },
+        "color": { "type": "object" }
+      },
+      "required": ["x", "y", "z", "color"]
+    },
+    "transform": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "width": { "type": "number" },
+    "height": { "type": "number" },
+    "depth": { "type": "number" },
+    "description": { "type": "string" }
+  },
+  "required": ["mark", "data", "encoding", "width", "height", "depth"],
+  "x-public-release-note": "Detailed field-level constraints are omitted in this public release."
+}

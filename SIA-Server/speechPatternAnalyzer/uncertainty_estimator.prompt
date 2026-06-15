@@ -1,0 +1,18 @@
+<Uncertainty Estimator Summary>
+- Purpose: classify utterance intent into one of three tasks: filter, navigate, or binning.
+- Output format: valid JSON-only payload for downstream uncertainty handling.
+
+Core rules:
+- Prioritize speech-act evidence over surface wording.
+- Select exactly one task label among filter, navigate, and binning.
+- Return confidence and uncertainty fields using fixed numeric precision expected by downstream modules.
+- Keep output schema deterministic for calibration and fusion with network predictions.
+
+Task scope:
+- filter: condition-based removal or narrowing of datapoints.
+- navigate: viewpoint/position or axis-navigation actions.
+- binning: grouping or partitioning values into steps or ranges.
+
+Public-release note:
+- Full examples, detailed logits policy, and long benchmark cases are omitted in this public release.
+</Uncertainty Estimator Summary>

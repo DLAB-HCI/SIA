@@ -1,0 +1,20 @@
+<Feedforward Candidate Generator Summary: bin>
+- Purpose: generate two binning-focused feedforward candidates from InputData.
+- Output format: valid JSON object only, no extra text.
+
+Core expectations:
+- Use embodiment cues first: spatialContextTypes, then gaze/head context.
+- If deictic speech appears and gaze target exists, center binning around nearby gaze datapoints.
+- Produce c1 and c2 with required cluster metadata from InputData.
+- Fill only bin-related decision fields and keep schema paths unchanged.
+- Prefer non-repetitive bin settings and avoid reusing previous axis-range patterns.
+
+Binning guidance:
+- Support AxisBin, AttributeBin, or CustomBoundary.
+- Use numeric edges or steps; avoid hybrid string ranges.
+- Keep insights action-oriented with a separate effect sentence.
+- Ground insights in concrete values and spatial viewpoint context.
+
+Public-release note:
+- Detailed policy rules and long examples are omitted in this public release.
+</Feedforward Candidate Generator Summary: bin>

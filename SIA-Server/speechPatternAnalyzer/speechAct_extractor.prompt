@@ -1,0 +1,12 @@
+<Speech Act Extractor Summary>
+- Purpose: extract one or more speech acts from an utterance.
+- Output format: valid JSON with one key, speech acts (array).
+
+Core rules:
+- Parse utterance into minimal actionable units that modify chart/data state.
+- Return JSON-only output with no extra commentary.
+- Preserve extracted actions as concise phrases suitable for downstream task inference.
+
+Public-release note:
+- Full prompt examples and detailed edge-case rules are omitted in this public release.
+</Speech Act Extractor Summary>

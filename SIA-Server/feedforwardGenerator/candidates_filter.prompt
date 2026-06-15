@@ -1,0 +1,19 @@
+<Feedforward Candidate Generator Summary: filter>
+- Purpose: generate two filtering-focused feedforward candidates from InputData.
+- Output format: valid JSON object only, no extra text.
+
+Core expectations:
+- Prioritize spatialContextTypes and embodiment context for filter reasoning.
+- If deictic speech appears and gaze target exists, anchor filters around gaze-near datapoints.
+- Propose new filtering actions, not restatements of current chart state.
+- Populate c1 and c2 using cluster fields from InputData without schema changes.
+- Fill filter-related fields (x, y, z, type) consistently with candidate insight.
+
+Filtering guidance:
+- Support RangeAdjustment or AttributeFilter.
+- Use concrete values from row_values and keep effect as a separate sentence.
+- Prefer unexplored ranges or attributes over repeated conditions.
+
+Public-release note:
+- Detailed policy rules and long examples are omitted in this public release.
+</Feedforward Candidate Generator Summary: filter>

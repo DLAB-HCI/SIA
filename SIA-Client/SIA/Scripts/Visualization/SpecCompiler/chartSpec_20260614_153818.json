@@ -1,0 +1,145 @@
+{
+  "mark": "point",
+  "data": {
+    "url": "data.csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "Lot_Area(sq)",
+      "type": "quantitative",
+      "bin": {
+        "enable": false,
+        "step": null,
+        "edges": null
+      },
+      "scale": {
+        "type": "linear",
+        "domain": [
+          1320,
+          215245
+        ],
+        "range": [
+          0,
+          1
+        ]
+      },
+      "axis": {
+        "title": "Lot Area (sq)"
+      },
+      "aggregate": null,
+      "sort": "ascending"
+    },
+    "y": {
+      "field": "Year_Remodeling",
+      "type": "quantitative",
+      "bin": {
+        "enable": false,
+        "step": null,
+        "edges": null
+      },
+      "scale": {
+        "type": "linear",
+        "domain": [
+          1950,
+          2020
+        ],
+        "range": [
+          0,
+          1
+        ]
+      },
+      "axis": {
+        "title": "Year Remodeling"
+      },
+      "aggregate": null,
+      "sort": "ascending"
+    },
+    "z": {
+      "field": "SalePrice",
+      "type": "quantitative",
+      "bin": {
+        "enable": false,
+        "step": null,
+        "edges": null
+      },
+      "scale": {
+        "type": "linear",
+        "domain": [
+          37900,
+          611657
+        ],
+        "range": [
+          0,
+          1
+        ]
+      },
+      "axis": {
+        "title": "Sale Price"
+      },
+      "aggregate": null,
+      "sort": "ascending"
+    },
+    "color": {
+      "field": "SalePrice",
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "domain": [
+          37900,
+          611657
+        ],
+        "range": [
+          "#4E79A7",
+          "#F28E2B",
+          "#E15759"
+        ]
+      },
+      "legend": {
+        "title": "Sale Price"
+      },
+      "sort": "ascending",
+      "value": "#A6761D",
+      "condition": [
+        {
+          "test": "datum.SalePrice >= 37900 && datum.SalePrice < 200000",
+          "value": "#4E79A7"
+        },
+        {
+          "test": "datum.SalePrice >= 200000 && datum.SalePrice < 400000",
+          "value": "#F28E2B"
+        },
+        {
+          "test": "datum.SalePrice >= 400000 && datum.SalePrice <= 611657",
+          "value": "#E15759"
+        }
+      ]
+    },
+    "detail": {
+      "field": "PID",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Lot_Area(sq)",
+        "type": "quantitative"
+      },
+      {
+        "field": "Year_Remodeling",
+        "type": "quantitative"
+      },
+      {
+        "field": "SalePrice",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [
+    {
+      "filter": "datum.Year_Remodeling >= 1950 && datum.Year_Remodeling <= 2020 && datum.SalePrice >= 37900 && datum.SalePrice <= 611657"
+    }
+  ],
+  "width": 600,
+  "height": 400,
+  "depth": 400,
+  "description": "3D scatter plot of houses filtered by Year Remodeling and Sale Price, colored by Sale Price."
+}

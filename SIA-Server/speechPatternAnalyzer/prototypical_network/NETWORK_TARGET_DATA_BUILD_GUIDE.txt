@@ -1,0 +1,33 @@
+Network Runtime Data Preperation Guide
+
+Required final files
+- network.py needs these 3 files (inside <data_dir>/):
+  - {basename} - binning-centroids.npz
+  - {basename} - filter-centroids.npz
+  - {basename} - navigate-centroids.npz
+- {basename} is set via the SIA_PROTONET_BASENAME env var (default: "dataset")
+
+How to build the npz files from data files
+1. Prepare one CSV per task (binning, filter, navigate).
+   - Each row must have: Utterance, Speech Act columns.
+   - Naming convention: {basename} - {task}.csv  (e.g. dataset - binning.csv)
+   - Place CSVs in <csv_dir>/
+2. For each row, build an input string: "{Speech Act}: {Utterance}"
+3. Embed all strings using a sentence embedding model (e.g. all-mpnet-base-v2).
+4. Cluster embeddings (e.g. AgglomerativeClustering) and compute the mean per cluster as the centroid.
+5. Save centroid arrays to <data_dir>/{basename} - {task}-centroids.npz
+
+NPZ format requirements
+- Contains one or more centroid arrays.
+- Accepted vectors:
+  - 1D vector (length > 1), or
+  - flattenable 2D array
+- All centroids in one file must use the same dimension.
+
+Quick validation
+- Confirm all 3 centroid files exist.
+- Confirm each file has at least one valid centroid vector.
+
+Important
+- module_* experimental scripts are not needed at runtime.
+- If centroid files are missing or invalid, network.py inference fails.

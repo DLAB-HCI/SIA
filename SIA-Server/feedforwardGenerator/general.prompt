@@ -1,0 +1,14 @@
+<Feedforward Candidate Generator Summary: general>
+- Purpose: generate two feedforward candidates from InputData when no task-specific prompt is selected.
+- Output format: valid JSON object only, no extra text.
+
+Core expectations:
+- Analyze axis, domain, cluster, and row context to propose actionable next-step guidance.
+- Keep candidate schema fixed and always populate c1 and c2 cluster metadata.
+- Use concrete data values in insights; avoid abstract-only language.
+- Prefer novel actions over repeated combinations from prior feedforwards.
+- Keep insights as an action sentence plus a separate effect sentence.
+
+Public-release note:
+- Detailed policy rules and long examples are omitted in this public release.
+</Feedforward Candidate Generator Summary: general>

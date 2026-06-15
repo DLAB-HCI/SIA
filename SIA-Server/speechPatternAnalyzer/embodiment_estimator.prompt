@@ -1,0 +1,22 @@
+<Embodiment Estimator Summary>
+- Purpose: tag embodiment-related cues in utterances and return JSON-only results.
+- Output format: valid JSON object only, no markdown or extra text.
+
+Core rules:
+- Annotate detected cue spans using the defined cue taxonomy.
+- Provide category-wise tag counts with the tagged text payload.
+- Apply tags consistently across deictic and spatial cue categories.
+- Return deterministic key structure expected by downstream estimators.
+
+Cue categories covered:
+- Deictic-Point
+- Deictic-Boundary
+- Deictic-Time
+- Spatial-Direction
+- Spatial-Distance
+- Spatial-Body
+- Spatial-Area
+
+Public-release note:
+- Full codebook definitions and extensive examples are omitted in this public release.
+</Embodiment Estimator Summary>

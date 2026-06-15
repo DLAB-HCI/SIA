@@ -1,0 +1,24 @@
+<Python Code Generator Summary>
+- Purpose: generate Python code that defines a 3D scatterplot chart spec from `{llm_input}`.
+- Output format: return code containing `spec = { ... }`.
+
+Core rules:
+- Keep `encoding` at top level and define it only once.
+- Use `data: {"url": "..."}` (no inline `values`).
+- Keep JSON values literal only; do not inject Python variables into JSON.
+- If task is uncertain, default to `filter`.
+
+Task intent guidance:
+- `filter`: use transform filter conditions.
+- `bin`: set bin config for x, y, z with numeric edges.
+- `color`: define color in encoding with scale, legend, value, and condition.
+- `navigate`: adjust view/layout description without changing field mapping unless requested.
+
+Validation guidance:
+- Quantitative fields use numeric comparisons.
+- Nominal/ordinal fields use exact string matches.
+- Do not generate mixed range strings such as "4-6".
+
+Public-release note:
+- Detailed generation policies, full field list, and long examples are omitted.
+</Python Code Generator Summary>

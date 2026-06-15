@@ -1,0 +1,162 @@
+{
+  "mark": "point",
+  "data": {
+    "url": "data.csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "Lot_Area(sq)",
+      "type": "quantitative",
+      "bin": {
+        "enable": true,
+        "step": 0.1,
+        "edges": [
+          0.0,
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.900000036,
+          1.0
+        ]
+      },
+      "scale": {
+        "type": "linear",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "range": [
+          0,
+          1
+        ]
+      },
+      "axis": {
+        "title": "Lot_Area(sq)"
+      },
+      "aggregate": null,
+      "sort": "ascending"
+    },
+    "y": {
+      "field": "Year_Remodeling",
+      "type": "quantitative",
+      "bin": {
+        "enable": true,
+        "step": 0.1,
+        "edges": [
+          0.0,
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.900000036,
+          1.0
+        ]
+      },
+      "scale": {
+        "type": "linear",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "range": [
+          0,
+          1
+        ]
+      },
+      "axis": {
+        "title": "Year_Remodeling"
+      },
+      "aggregate": null,
+      "sort": "ascending"
+    },
+    "z": {
+      "field": "SalePrice",
+      "type": "quantitative",
+      "bin": {
+        "enable": true,
+        "step": 0.1,
+        "edges": [
+          0.0,
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.900000036,
+          1.0
+        ]
+      },
+      "scale": {
+        "type": "linear",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "range": [
+          0,
+          1
+        ]
+      },
+      "axis": {
+        "title": "SalePrice"
+      },
+      "aggregate": null,
+      "sort": "ascending"
+    },
+    "color": {
+      "field": "",
+      "type": "nominal",
+      "scale": {
+        "type": "ordinal",
+        "domain": [
+          0,
+          1
+        ],
+        "range": [
+          "#4E79A7",
+          "#F28E2B",
+          "#E15759",
+          "#76B7B2",
+          "#59A14F",
+          "#EDC949",
+          "#AF7AA1",
+          "#FF9DA7",
+          "#9C755F",
+          "#BAB0AC"
+        ]
+      },
+      "legend": {
+        "title": ""
+      },
+      "sort": "ascending",
+      "value": "#BAB0AC",
+      "condition": []
+    },
+    "detail": {
+      "field": "",
+      "type": ""
+    },
+    "tooltip": []
+  },
+  "transform": [
+    {
+      "filter": "datum.SalePrice >= 37900 && datum.SalePrice <= 611657"
+    }
+  ],
+  "width": 1.0,
+  "height": 1.0,
+  "depth": 1.0,
+  "description": "Exported from IATK scatterplot"
+}

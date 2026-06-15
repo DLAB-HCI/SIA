@@ -1,0 +1,53 @@
+{
+  "mark": "point",
+  "data": { "url": "data.csv" },
+  "encoding": {
+    "x": {
+      "field": "",
+      "type": "quantitative",
+      "bin": { "enable": false, "step": null, "edges": null },
+      "scale": { "type": "linear", "domain": [0, 0], "range": [0, 1] },
+      "axis": { "title": "" },
+      "aggregate": null,
+      "sort": "ascending"
+    },
+    "y": {
+      "field": "",
+      "type": "quantitative",
+      "bin": { "enable": false, "step": null, "edges": null },
+      "scale": { "type": "linear", "domain": [0, 0], "range": [0, 1] },
+      "axis": { "title": "" },
+      "aggregate": null,
+      "sort": "ascending"
+    },
+    "z": {
+      "field": "",
+      "type": "quantitative",
+      "bin": { "enable": false, "step": null, "edges": null },
+      "scale": { "type": "linear", "domain": [0, 0], "range": [0, 1] },
+      "axis": { "title": "" },
+      "aggregate": null,
+      "sort": "ascending"
+    },
+    "color": {
+      "field": "",
+      "type": "nominal",
+      "scale": {
+        "type": "ordinal",
+        "domain": [0, 1],
+        "range": ["#4E79A7","#F28E2B","#E15759","#76B7B2","#59A14F","#EDC949","#AF7AA1","#FF9DA7","#9C755F","#BAB0AC"]
+      },
+      "legend": { "title": "" },
+      "sort": "ascending",
+      "value": "#BAB0AC",
+      "condition": []
+    },
+    "detail": { "field": "", "type": "" },
+    "tooltip": []
+  },
+  "transform": [ { "filter": "" } ],
+  "width": 0,
+  "height": 0,
+  "depth": 0,
+  "description": ""
+}

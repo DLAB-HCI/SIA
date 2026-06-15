@@ -1,0 +1,20 @@
+<Feedforward Candidate Generator Summary: navigate>
+- Purpose: generate two navigation-focused feedforward candidates from InputData.
+- Output format: valid JSON object only, no extra text.
+
+Core expectations:
+- Use spatialContextTypes as the primary navigation driver.
+- If deictic speech appears and gaze target exists, guide navigation toward gaze-near datapoints.
+- Produce c1 and c2 with required cluster metadata from InputData.
+- Keep JSON schema unchanged and update only navigation-related decision fields.
+- Ensure candidate diversity across movement directions or field-switch choices.
+
+Navigation guidance:
+- Support MoveView, ExplorePoint, or FieldSwitching.
+- For view movement, use axis-plane direction semantics.
+- For field switching, choose new fields rather than current axis assignments.
+- Keep insights action-oriented with a separate effect sentence.
+
+Public-release note:
+- Detailed policy rules and long examples are omitted in this public release.
+</Feedforward Candidate Generator Summary: navigate>
