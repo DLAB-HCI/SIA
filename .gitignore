@@ -142,3 +142,5 @@ venv/
 *.exe
 *_BackUpThisFolder_ButDontShipItWithYourGame/
 MonoBleedingEdge/
+
+SIA-Server/asset_dataset/Ames_Iowa_Housing_Filtered.csv
